@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+
+
+class myclassPri // é a classe principal
+{
+    private:
+    
+    public:
+        std::string brand = "ford \n";
+        void honk();
+    
+};
+
+class myclassSeg : public myclassPri // é a minha classe segundaria 
+{
+  private:
+  
+  public:
+    std::string model = "mustang \n";
+};
+
+class myclassTer : public myclassSeg
+{
+    
+};
+
+int main()
+{
+    myclassSeg mycar;
+    myclassTer mycar1;
+    mycar.honk();
+    std::cout << mycar.brand << " " << mycar.model;
+    std::cout << mycar1.model << std::endl;
+    std::cout << mycar1.brand << std::endl;
+    return 0;
+}
+
+void myclassPri::honk()
+{
+    std::cout << "tuuts .. tuuts" << std::endl;
+}
