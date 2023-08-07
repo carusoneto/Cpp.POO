@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+
+class funcionario
+{
+  protected:
+    int salario;
+};
+
+class programador : public funcionario
+{
+    private:
+    
+    public:
+        int bonus;
+        void setsalario(int y);
+        int getsalario();
+};
+
+int main ()
+{
+    programador myobj;
+    myobj.setsalario(5500);
+    myobj.bonus = 1500;
+    std::cout << "o salario do programador é : " << myobj.getsalario() << std::endl;
+    std::cout << " o bonus é : " << myobj.bonus << std::endl;
+    return 0;
+}
+
+void programador::setsalario(int z)
+{
+    salario = z;
+}
+
+int programador::getsalario()
+{
+    return salario;
+}
