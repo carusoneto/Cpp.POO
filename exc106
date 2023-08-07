@@ -1,0 +1,27 @@
+// me faça um programa que chame dois objetos usando construtores 
+#include <iostream>
+#include <string>
+
+class myclass
+{
+    public:
+        std::string nome;
+        int num;
+    myclass (std::string x, int y)
+    {
+        nome = x;
+        num = y;
+    }
+    
+};
+
+int main()
+{
+    myclass myobj("lucas",10);
+    myclass myobj1("carlos",20);
+    
+    std::cout << myobj.nome << myobj.num << std::endl;
+    std::cout << myobj1.nome << myobj1.num << std::endl;
+    
+    return 0;
+}
