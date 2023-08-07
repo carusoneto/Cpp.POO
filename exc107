@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+class car
+{
+    private:
+    
+    public:
+        std::string marca;
+        std::string modelo;
+        int ano;
+    car(std::string x, std::string y, int z)
+    {
+        marca = x;
+        modelo = y;
+        ano = z;
+    }
+        
+};
+
+int main ()
+{
+    car myobj1("ford", "mustang", 1990);
+    std::cout << myobj1.marca << " " << myobj1.modelo << " " << myobj1.ano << std::endl;
+    car myobj2("fiat", "miler", 2000);
+    std::cout << myobj2.marca << " " << myobj2.modelo << " " << myobj2.ano << std::endl;
+  
+};
