@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+class funcionario
+{
+  private:
+        std::string nome;
+  public:
+        void setnome(std::string x);
+        std::string getnome();
+        
+};
+
+int main()
+{
+    funcionario nomedofuncionario;
+    nomedofuncionario.setnome("caruso");
+    std::cout << nomedofuncionario.getnome();
+    return 0;
+}
+
+void funcionario::setnome(std::string x)
+{
+    nome = x;
+}
+
+std::string funcionario::getnome()
+{
+    return nome;
+}
