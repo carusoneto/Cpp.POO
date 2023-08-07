@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+
+
+class myclassPri // é a classe principal
+{
+    private:
+    
+    public:
+        std::string brand = "ford";
+        void honk();
+    
+};
+
+class myclassSeg : public myclassPri // é a minha classe derivada
+{
+  private:
+  
+  public:
+    std::string model = "mustang";
+};
+
+int main()
+{
+    myclassSeg mycar;
+    mycar.honk();
+    std::cout << mycar.brand << " " << mycar.model;
+    return 0;
+}
+
+void myclassPri::honk()
+{
+    std::cout << "tuuts .. tuuts" << std::endl;
+}
