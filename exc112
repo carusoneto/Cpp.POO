@@ -1,0 +1,82 @@
+// me faça um programa que defina e mostre as informações bancancarias de um usuario 
+
+#include <iostream>
+#include <string>
+
+class dados
+{
+  private:
+    std::string nomecompleto;
+    int agenica;
+    int conta;
+    int cpf;
+  public:
+    void setnomecompleto(std::string nomecompleto);
+    void setagencia(int agenica);
+    void setconta(int conta);
+    void setcpf(int cpf);
+    std::string getnomecompleto();
+    int getagencia();
+    int getconta();
+    int getcpf();
+};
+
+int main ()
+{
+    dados cliente;
+    cliente.setnomecompleto("caetano caruso neto");
+    cliente.setagencia(2628);
+    cliente.setconta(889-9);
+    cliente.setcpf(2339);
+    std::cout << "confirmação de dados do usuario" << std::endl;
+    std::cout << "nome do cliente : ";
+    std::cout << cliente.getnomecompleto() << std::endl;
+    std::cout << "agencia bancaria : ";
+    std::cout << cliente.getagencia() << std::endl;
+    std::cout << "conta bancaria : ";
+    std::cout << cliente.getconta() << std::endl;
+    std::cout << "cpf : ";
+    std::cout << cliente.getcpf() << std::endl;
+
+    return 0;
+}
+
+void dados::setnomecompleto(std::string nomecompleto)
+{
+    this->nomecompleto = nomecompleto;
+}
+
+void dados::setagencia(int agenica)
+{
+    this->agenica = agenica;
+}
+
+void dados::setconta(int conta)
+{
+    this->conta = conta;
+}
+
+void dados::setcpf(int cpf)
+{
+    this->cpf = cpf;
+}
+
+std::string dados::getnomecompleto()
+{
+    return nomecompleto;
+}
+
+int dados::getagencia()
+{
+    return agenica;
+}
+
+int dados::getconta()
+{
+    return conta;
+}
+
+int dados::getcpf()
+{
+    return cpf;
+}
